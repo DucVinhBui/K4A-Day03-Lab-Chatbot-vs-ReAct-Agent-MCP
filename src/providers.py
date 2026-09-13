@@ -154,6 +154,7 @@ class OpenAIProvider(BaseLLMProvider):
             response = client.chat.completions.create(model=self.model_name, messages=messages)
             return response.choices[0].message.content or ""
         except Exception as e:
+            # print(str(e))
             return f"[OpenAI Exception]: {str(e)}"
 
     def generate_with_tools(self, prompt: str, tools_schema: List[Dict[str, Any]], system_prompt: str = "") -> Dict[str, Any]:
@@ -191,6 +192,8 @@ class OpenAIProvider(BaseLLMProvider):
             )
 
             msg = response.choices[0].message
+            print(f"{"*" * 100}")
+            print(msg)
             if msg.tool_calls:
                 call = msg.tool_calls[0]
                 args = json.loads(call.function.arguments) if call.function.arguments else {}
@@ -224,6 +227,7 @@ def get_llm_provider() -> BaseLLMProvider:
     elif provider_type == "openai":
         key = os.getenv("OPENAI_API_KEY")
         if key and key != "your_openai_api_key_here":
+            print("#######HERE")
             return OpenAIProvider()
         else:
             return MockOfflineProvider()

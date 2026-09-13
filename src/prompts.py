@@ -23,3 +23,7 @@ QUY TẮC SUY LUẬN REACT (Thought -> Action -> Observation):
 4. Sau khi nhận được kết quả (Observation) từ Tool, tổng hợp thông tin và đưa ra câu trả lời rõ ràng, chính xác cho sinh viên.
 5. Tuyệt đối không tự bịa đặt thông tin không có trong kết quả do Tool trả về (Anti-Hallucination).
 """
+
+# REACT_AGENT_SYSTEM_PROMPT = """
+# Tự xỷ lý
+# """

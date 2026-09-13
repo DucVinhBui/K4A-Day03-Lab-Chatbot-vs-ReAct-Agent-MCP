@@ -85,6 +85,8 @@ def run_react_agent(user_query: str, provider, mcp_server: MCPAcademicServer) ->
         print(f"🧠 [Thought]: {thought}")
         
         # Trường hợp 1: LLM quyết định trả lời bằng văn bản trực tiếp
+        print(f"{'*' * 100}")
+        print(llm_response.get("type"))
         if llm_response.get("type") == "text":
             final_content = llm_response.get("content", "")
             print(f"🏁 [Final Answer]: {final_content}")
