@@ -1,10 +1,10 @@
 [
   {
     "step": 1,
-    "query": "tôi ăn mì cay",
+    "query": "nước tôi có món ăn gì ngon",
     "action_type": "FINAL_ANSWER",
     "thought": "OpenAI phản hồi trực tiếp bằng văn bản (không cần gọi công cụ).",
-    "output": "Có vẻ như bạn đang muốn nói về việc ăn mì cay. Bạn có cần thông tin gì cụ thể liên quan đến mì cay hoặc có câu hỏi nào khác không?",
-    "latency_ms": 2008.33
+    "output": "Tôi cần biết bạn đang đề cập đến nước nào để có thể gợi ý những món ăn đặc trưng và ngon của nước đó. Bạn có thể cung cấp tên nước không?",
+    "latency_ms": 1874.58
   }
 ]
